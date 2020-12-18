@@ -47,21 +47,21 @@
 
 We've left a few tutorial and demo models here for you to get started!
 
-To create a model, use the Workflow Editor to create or edit a model.  If you edit the tutorials, please save them into your own model so that others can start from a clean model!
+To create a model, use the Flow Modeler to create or edit a model.  If you edit the tutorials, please save them into your own model so that others can start from a clean model!
 
-To execute a model, use the Process Instances tab to get the Flow Monitor.
+To execute a model, use the Flow Monitor tab to get the Flow Monitor.
 
-Using Create Instance, select the Process Diagram that you want to execute an Instance of.  Give it a Name.
+Using '+ Create a New Instance' button, select the Process Diagram that you want to execute an Instance of.  Give it a Name.
 
-The Process Instances tab shows you all of the current process instances.  Find your process instance &amp;click on the Play button to Start your Process executing.
+The Flow Instances tab shows you all of the current process instances.  Find your flow instance &amp;click on the Play button to Start your Flow executing.
 
-Then move to the Subflows tab to see the individual routes (subflows) through your process.  Use the Forward Icons to move the subflow forwards.
+Then move to the Subflows tab to see the individual routes (subflows) through your process.  Use the 'Go to Next Step' button to move the subflow forwards.
 
 The third tab is Variables -- we'll explore that in the Gateway Tutorial model...
 
-This model has a parallel section, but is otherwise very simple.  Step through the model using the Forward icon to show progress.
+This model has a parallel section, but is otherwise very simple.  Step through the model using the 'Go to Next Step' icon to show progress.
 
-When the process has completed, you can go back to Process Instances and either reset it, to execute it again, or delete it.</bpmn:text>
+When the flow has completed, you can go back to Flow Instances and either reset it, to execute it again, or delete it.</bpmn:text>
     </bpmn:textAnnotation>
     <bpmn:association id="Association_1qmz32s" sourceRef="Event_1h6hi8k" targetRef="TextAnnotation_0s1apks" />
     <bpmn:textAnnotation id="TextAnnotation_1ooxxc0">
