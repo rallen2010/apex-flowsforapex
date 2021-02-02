@@ -35,7 +35,7 @@ as
         , sbfl_current_lane_name
         , sbfl_reservation
      from flow_subflows_vw sbfl
-     join apex_appl_ack_user_roles roles
+     join apex_appl_acl_user_roles roles
        on sbfl.sbfl_current_lane_name = roles.role_static_id
     where sbfl_status = 'running'
       and roles.user_name = SYS_CONTEXT('APEX$SESSION','APP_USER')
