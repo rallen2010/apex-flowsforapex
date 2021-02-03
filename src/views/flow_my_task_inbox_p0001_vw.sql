@@ -25,12 +25,10 @@ select sbfl_id
           end link_text
         , case sbfl_current_tag_name
             when 'bpmn:userTask' then 
-                '<button type="button" class="t-Button t-Button--noLabel t-Button--icon" ' ||
-                'title="Open Task" aria-label="Open Task" '||
-                '<span class="fa fa-box-arrow-in-ne"></span>'
+                'fa-box-arrow-in-ne'
             else
-                '<span class="fa fa-share-alt"></span>'
-          end link_html
+                'fa-share-alt'
+          end link_icon
         , sbfl_current_tag_name
         , sbfl_last_update
         , sbfl_status
@@ -71,7 +69,7 @@ select sbfl_id
                     from  flow_process_variables prov
                     where prov.prov_prcs_id = sbfl.sbfl_prcs_id
                         and prov.prov_var_vc2 = SYS_CONTEXT('APEX$SESSION','APP_USER')
-                        and prov.prov_var_name = 'Originating_Employee'))
+                        and prov.prov_var_name = 'Originator'))
        or
       (sbfl.sbfl_current_lane_name = roles.role_name
       and roles.user_name = SYS_CONTEXT('APEX$SESSION','APP_USER')
@@ -83,4 +81,5 @@ select sbfl_id
                     and prov.prov_var_vc2 = SYS_CONTEXT('APEX$SESSION','APP_USER')
                     and prov.prov_var_name = 'Next_Approver')
         )
-with read only;
+with read only
+;
