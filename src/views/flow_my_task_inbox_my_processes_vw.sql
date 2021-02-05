@@ -7,6 +7,7 @@ create or replace view flow_my_task_inbox_my_processes as
       , sbfl.sbfl_reservation
       , sbfl.sbfl_last_update
       , sbfl.sbfl_status
+      , sbfl.sbfl_prcs_init_ts
    from flow_task_inbox_vw sbfl
    join flow_process_variables prov
      on prov.prov_prcs_id = sbfl.sbfl_prcs_id
@@ -22,6 +23,7 @@ create or replace view flow_my_task_inbox_my_processes as
       , null 
       , prcs.prcs_last_update 
       , prcs.prcs_status
+      , prcs.prcs_init_ts
    from flow_instances_vw prcs
    join flow_process_variables prov
      on prov.prov_prcs_id = prcs.prcs_id
