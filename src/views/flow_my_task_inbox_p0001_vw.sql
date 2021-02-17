@@ -59,12 +59,12 @@ select sbfl_id
       and (sbfl.sbfl_current_lane_name = roles.role_name
             and roles.user_name = SYS_CONTEXT('APEX$SESSION','APP_USER')
             and roles.workspace_id = SYS_CONTEXT('APEX$SESSION','WORKSPACE_ID')
-            and roles.role_name not in ('Employee', 'Manager'))
+            and roles.role_name not in ('Originator', 'Manager'))
        or 
         (sbfl.sbfl_current_lane_name = roles.role_name
         and roles.user_name = SYS_CONTEXT('APEX$SESSION','APP_USER')
         and roles.workspace_id = SYS_CONTEXT('APEX$SESSION','WORKSPACE_ID')
-        and roles.role_name = 'Employee'
+        and roles.role_name = 'Originator'
         and exists (select prov_var_vc2
                     from  flow_process_variables prov
                     where prov.prov_prcs_id = sbfl.sbfl_prcs_id
