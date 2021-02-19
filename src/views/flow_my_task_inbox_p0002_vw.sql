@@ -1,4 +1,4 @@
-CREATE OR REPLACE  VIEW  FLOW_MY_TASK_INBOX_p0001_VW as
+CREATE OR REPLACE  VIEW  FLOW_MY_TASK_INBOX_p0002_VW as
 select sbfl_id
         , sbfl_sbfl_id
         , sbfl_prcs_id
