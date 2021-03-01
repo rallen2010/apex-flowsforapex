@@ -9,10 +9,9 @@
 - Adds plain PL/SQL option for Script Tasks and Service Tasks to allow automated tasks to execute following a timer.
 - Fixed bug preventing processes with nested open parallel gateways from completing.
 - Fixed bug preventing long duration (months, years) timers from starting.
-- Added bpmn lint rule to warn when original, default object names used.
 - Updated bpmn.io libraries.
 - Added upgrade support to installation process.
-
+- Hey, we even have our own logo now!
 
 ## v5.0.1
 
